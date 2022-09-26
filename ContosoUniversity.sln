@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{0FD737CC-1515-4C42-8FE4-12074F0F6D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoWeb", "ContosoWeb\ContosoWeb.csproj", "{6274BBBA-0981-486D-AA7F-05D3A9FA2559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{2984B83C-3E3B-4719-AD1F-6C2290CE4F84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FD737CC-1515-4C42-8FE4-12074F0F6D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD737CC-1515-4C42-8FE4-12074F0F6D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD737CC-1515-4C42-8FE4-12074F0F6D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD737CC-1515-4C42-8FE4-12074F0F6D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6274BBBA-0981-486D-AA7F-05D3A9FA2559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6274BBBA-0981-486D-AA7F-05D3A9FA2559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6274BBBA-0981-486D-AA7F-05D3A9FA2559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6274BBBA-0981-486D-AA7F-05D3A9FA2559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2984B83C-3E3B-4719-AD1F-6C2290CE4F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2984B83C-3E3B-4719-AD1F-6C2290CE4F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2984B83C-3E3B-4719-AD1F-6C2290CE4F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2984B83C-3E3B-4719-AD1F-6C2290CE4F84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F0698F2-BA40-4D90-A002-0B47A547612E}
+	EndGlobalSection
+EndGlobal
