@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ContosoWeb.Models.SchoolViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using Persistencia.Repositorio;
 
 namespace ContosoWeb.Controllers
 {
+    [Authorize]
     public class InstructorsController : Controller
     {
         private readonly SchoolContext _context;
@@ -21,6 +23,7 @@ namespace ContosoWeb.Controllers
         }
 
         // GET: Instructors
+        [AllowAnonymous]
         public async Task<IActionResult> Index(int? id, int? courseID)
         {
             var viewModel = new InstructorIndexData();

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Persistencia.Entidades;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,11 @@ using System.Threading.Tasks;
 
 namespace Persistencia.Repositorio
 {
-    public class SchoolContext : DbContext
+    // contexto vai gerenciar o Identity
+    // public class SchoolContext : DbContext
+    public class SchoolContext : IdentityDbContext<ApplicationUser>
     {
+       
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
         }
@@ -21,6 +25,9 @@ namespace Persistencia.Repositorio
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
         public DbSet<CourseAssignment> CourseAssignments { get; set; }
+
+        // bd de autenticacao
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,7 +41,16 @@ namespace Persistencia.Repositorio
 
             modelBuilder.Entity<CourseAssignment>()
                 .HasKey(c => new { c.CourseID, c.InstructorID });
+
+            // associar a PK do Identity
+            modelBuilder.Entity<ApplicationUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
+
+
+
+
 
